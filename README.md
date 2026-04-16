@@ -92,3 +92,4 @@ Desde la raiz del repositorio:
 - Al abrir http://localhost:4001 se visualiza WEB 01.
 - Al abrir http://localhost:4002 se visualiza WEB 02.
 - Ambos servicios quedan gestionados desde un unico docker-compose.yml.
+# lab01-iac-jueves-am
