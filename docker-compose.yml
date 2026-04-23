@@ -8,3 +8,8 @@ services:
     build: src/web02
     ports:
       - "4002:80"
+
+  api:
+    build: api
+    ports:
+      - "4003:3000"
