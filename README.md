@@ -7,7 +7,7 @@ Quiero poder publicar esta web, especificamente una sola copia como primera inst
 TAREA:
 
 Desplegar dos web, mostrar Web01, y Web02 como contenido
-Los puertos deben estar configurados en 4000 y 4001
+Los puertos deben estar configurados en 4001 y 4002
 Gestionar carpetas para orden
 Hacer uso de Gitflow/Conventional Commits
 
@@ -16,27 +16,27 @@ Hacer uso de Gitflow/Conventional Commits
 El proyecto define 2 servicios en Docker Compose:
 
 - web01
-	- Build desde src/web01
-	- Publica el puerto 4001 del host hacia el puerto 80 del contenedor
-	- Sirve una pagina HTML con el texto WEB 01
+  - Build desde src/web01
+  - Publica el puerto 4001 del host hacia el puerto 80 del contenedor
+  - Sirve una pagina HTML con el texto WEB 01
 
 - web02
-	- Build desde src/web02
-	- Publica el puerto 4002 del host hacia el puerto 80 del contenedor
-	- Sirve una pagina HTML con el texto WEB 02
+  - Build desde src/web02
+  - Publica el puerto 4002 del host hacia el puerto 80 del contenedor
+  - Sirve una pagina HTML con el texto WEB 02
 
 ## Estructura del proyecto
 
-		.
-		├── docker-compose.yml
-		├── README.md
-		└── src
-				├── web01
-				│   ├── Dockerfile
-				│   └── index.html
-				└── web02
-						├── Dockerfile
-						└── index.html
+    	.
+    	├── docker-compose.yml
+    	├── README.md
+    	└── src
+    			├── web01
+    			│   ├── Dockerfile
+    			│   └── index.html
+    			└── web02
+    					├── Dockerfile
+    					└── index.html
 
 ## Explicacion de los archivos clave
 
@@ -67,29 +67,27 @@ Ambos Dockerfile:
 
 Verificacion rapida:
 
-		docker --version
-		docker compose version
+    	docker --version
+    	docker compose version
 
 ## Como levantar el proyecto
 
 Desde la raiz del repositorio:
 
-1. Construir y levantar servicios:
+1.  Construir y levantar servicios:
 
-			 docker compose up --build -d
+        	 docker compose up --build -d
 
-2. Verificar contenedores en ejecucion:
+2.  Verificar contenedores en ejecucion:
 
-			 docker compose ps
+        	 docker compose ps
 
-3. Probar en navegador:
-
-	 - http://localhost:4001  -> WEB 01
-	 - http://localhost:4002  -> WEB 02
+3.  Probar en navegador:
+    - http://localhost:4001 -> WEB 01
+    - http://localhost:4002 -> WEB 02
 
 ## Resultado esperado
 
 - Al abrir http://localhost:4001 se visualiza WEB 01.
 - Al abrir http://localhost:4002 se visualiza WEB 02.
 - Ambos servicios quedan gestionados desde un unico docker-compose.yml.
-# lab01-iac-jueves-am
