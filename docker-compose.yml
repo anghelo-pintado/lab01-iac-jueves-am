@@ -1,15 +1,24 @@
 services:
   web01:
     build: src/web01
+    container_name: lab/web01
     ports:
       - "4001:80"
 
   web02:
     build: src/web02
+    container_name: lab/web02
     ports:
       - "4002:80"
 
   api:
-    build: api
+    build: src/api
+    container_name: lab/api
     ports:
       - "4003:3000"
+
+  bd:
+    build: src/bd
+    container_name: lab/bd
+    ports:
+      - "4005:5432"
