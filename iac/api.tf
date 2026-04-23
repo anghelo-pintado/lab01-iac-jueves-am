@@ -9,7 +9,7 @@ resource "docker_container" "api" {
   }
 
   networks_advanced {
-    name = docker_network.front
+    name = docker_network.front.name
   }
 
   networks_advanced {
