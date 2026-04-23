@@ -1,0 +1,5 @@
+FROM postgres:15-alpine
+
+ENV POSTGRES_PASSWORD=contra123
+
+EXPOSE 5432

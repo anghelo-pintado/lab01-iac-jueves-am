@@ -1,7 +1,7 @@
 # Start a container
 resource "docker_container" "bd" {
   name  = "bd-${terraform.workspace}"
-  image = ""
+  image = "lab/bd"
 
   ports {
     internal = 5432
