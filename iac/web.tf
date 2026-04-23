@@ -9,6 +9,6 @@ resource "docker_container" "web" {
   }
 
   networks_advanced {
-    name = docker_network.front
+    name = docker_network.front.name
   }
 }

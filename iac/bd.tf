@@ -9,6 +9,6 @@ resource "docker_container" "bd" {
   }
 
   networks_advanced {
-    name = docker_network.back
+    name = docker_network.back.name
   }
 }

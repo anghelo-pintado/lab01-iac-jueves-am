@@ -13,6 +13,6 @@ resource "docker_container" "api" {
   }
 
   networks_advanced {
-    name = docker_network.back
+    name = docker_network.back.name
   }
 }
