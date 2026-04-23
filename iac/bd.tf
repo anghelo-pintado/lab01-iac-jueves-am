@@ -7,4 +7,8 @@ resource "docker_container" "bd" {
     internal = 5432
     external = var.bd_port[terraform.workspace]
   }
+
+  networks_advanced {
+    name = docker_network.back
+  }
 }
