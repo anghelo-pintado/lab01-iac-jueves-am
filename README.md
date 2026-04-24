@@ -57,19 +57,19 @@ terraform apply
 > Por defecto usa el workspace `default` (puertos: web 2000, api 2001, bd 15432).
 > Para usar otro entorno:
 
-    - Los creamos con:
+- Los creamos con:
 
-    ```bash
-    terraform workspace new dev
-    terraform workspace new qa
-    ```
+```bash
+terraform workspace new dev
+terraform workspace new qa
+```
 
-    - Se seleccionan con antes del apply:
+- Se seleccionan con antes del apply:
 
-    ```bash
-    terraform workspace select dev
-    terraform workspace select qa
-    ```
+```bash
+terraform workspace select dev
+terraform workspace select qa
+```
 
 ### 3. Verificar contenedores y redes
 
